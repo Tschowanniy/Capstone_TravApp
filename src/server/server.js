@@ -1,6 +1,6 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = {};
-cityPicture = {};
+//projectData = {};
+//cityPicture = {};
 
 // Require Express to run server and routes
 const bodyParser = require('body-parser');
@@ -80,11 +80,6 @@ app.post('/weatherapi', async (req, res) => {
     }    
 )
 
-// Setup Server -- as also done in: Node & Express Environment → 6. Creating a Local Server I
-const port = 3000;
-const server = app.listen(port, () => {
-    console.log('server is up and running'),
-        console.log(`running on localhost: ${port}`)
-});
 
+module.exports = app;
 
