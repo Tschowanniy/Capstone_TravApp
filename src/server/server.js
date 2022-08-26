@@ -32,7 +32,7 @@ const pixaUrlAdd = '&image_type=photo&category=places&q=';
 let cityEntered = [];
 app.post('/pixaapi', async (req, res) => {
     cityEntered = req.body.pixCity;
-    const pixaApiURL = pixaBaseUrl + process.env.API_KEY_PIXABAY + pixaUrlAdd + cityEntered;
+    const pixaApiURL = pixaBaseUrl + '29415427-e8aa82c582805c855e84f7435' + pixaUrlAdd + cityEntered;
     const fetchedFromAPI = await fetch(pixaApiURL)
     .then((response) => response.json())
     .then((data) => {
@@ -50,7 +50,7 @@ const geoNamesUrlAdd = '&maxRows=1&username=';
 let geocity= [];
 app.post('/geoapi', async (req, res) => {
     geocity = req.body.latLong;
-    const geoNameApiURL = geoNamesBaseUrl + geocity + geoNamesUrlAdd + process.env.API_KEY_GEONAMES;
+    const geoNameApiURL = geoNamesBaseUrl + geocity + geoNamesUrlAdd + 'tschowanniy';
     console.log(geoNameApiURL);
     const fetchedFromAPI = await fetch(geoNameApiURL)
     .then((response) => response.json())
@@ -69,7 +69,7 @@ const weatherBitUrlAdd = '&tp=daily&key=';
 //let weatherdata= [];
 app.post('/weatherapi', async (req, res) => {
     //weatherdata = [req.body.lat, req.body.lng, req.body.from, req.body.to ];
-    const weatherBitApiURL = weatherBitBaseUrl + req.body.lat +'&lon='+ req.body.lng + '&start_day=' + req.body.from + '&end_day='  +  req.body.to + weatherBitUrlAdd + process.env.API_KEY_WEATHERBIT;
+    const weatherBitApiURL = weatherBitBaseUrl + req.body.lat +'&lon='+ req.body.lng + '&start_day=' + req.body.from + '&end_day='  +  req.body.to + weatherBitUrlAdd + '930daa1d702842e0a2d9cd221bdcdce5';
     console.log(weatherBitApiURL);
     const fetchedFromAPI = await fetch(weatherBitApiURL)
     .then((response) => response.json())
