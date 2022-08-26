@@ -1,0 +1,276 @@
+body{
+    margin-top: 75px;
+    padding-top: 60px;
+    padding-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: url("https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_960_720.jpg");
+    background-position: top;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "search main";
+    grid-template-columns: 350px auto;
+    ;
+}
+
+.grid_search{
+    grid-area: search;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+ 
+}
+
+.tripinfo{
+    position: relative;
+}
+
+.delete_button{
+    height: 25px;
+    width: 20px;
+    margin: 5px;
+    position: absolute; bottom: 0; right: 0;
+    color: black;
+    font-size: 14px;
+    border-radius: 5%;
+    background: url('https://cdn-icons-png.flaticon.com/128/1979/1979287.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.delete_button:hover{
+    background: url('https://cdn-icons-png.flaticon.com/128/2602/2602735.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.liste{
+    position: absolute; top: 0; left: 0;
+}
+
+.grid_main{
+    grid-area: main;
+    display: grid;
+    left: 350px;
+    //height: 700px;
+}
+
+#app{
+    color: #ffffff;
+    grid-area: "main";
+    display: grid;
+    width: 350px;
+    grid-auto-rows: minmax(150px, auto);
+    height:auto;
+    color: #ffffff;
+    justify-content: center;
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+   // position: fixed;
+}
+
+.box{
+    border: #8b4b55 solid 1px;
+    
+}
+.box2{
+    border: #2c3585 solid 1px;
+    
+}
+/*I'd like to have a fixed header and footer at all times, when scrolling on large and small screens*/
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    justify-content: left;
+    align-content: center;
+}
+
+.fixed_header,
+.fixed_footer {
+    width: 100%;
+    position: fixed;
+    background: rgb(30, 56, 65);
+    //background: transparent;
+    color: #fff;
+}
+
+.fixed_header {
+    top: 0;
+    left: 0;
+    height: 75px;
+}
+
+.fixed_footer {
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    display: flex;
+
+}
+
+.entry{
+    background: rgba(59, 74, 107, .4);
+}
+
+
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    display:block;
+    font-size: 27px;
+}
+
+input{
+    display:block;
+    height: 60px;
+    width: 200px;
+    background:#3b4a6b;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+
+button{
+    width: 200px;
+    height: 100px;
+    background: #3b4a6b;
+    color: #ffffff;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+}
+h1{
+    font-size: 36px;
+}
+
+textarea{
+    background:#3b4a6b;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #ffffff; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color:  #ffffff; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color:  #ffffff; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+.trip_item{
+    margin: 5px;
+    border-radius: 5px ;
+    background: #365670;
+    display: grid;
+    max-width: 800px;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: 
+    "tripto tripto"
+    "trippic tripinfo ";
+}
+
+.tripto{
+    grid-area: tripto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.trippic{
+    margin: 10px;
+    grid-area: trippic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tripinfo{
+    margin: 10px;
+    grid-area: tripinfo;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.label{
+    background-color: #365670;
+    margin-top: 7px;
+}
+
+.travel_time{
+
+margin-top: 7px;
+}
+
+.builder{
+    background-color: #444;
+    color: #fff;
+}
+.builder:hover{
+    background-color: #3b4a6b;
+}
+
+@media only screen and (max-width: 850px) {
+    .container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "search"
+        "main"
+        ;
+    }
+
+    .grid_search{
+        grid-area: search;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        position: relative;
+     
+    }
+    .grid_main{
+        grid-area: main;
+        display: grid;
+        left: 350px;
+        //height: 700px;
+    }
+}
+    
