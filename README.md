@@ -19,5 +19,13 @@ all of them.
 
 #### The result
 
+The page when you enter it:
+![alt text for screen readers](./assets/startingPage.png "the final result")
+
+One of the possible error messages:
+![alt text for screen readers](./assets/AlertForTravelPast.png "error message")
+
+Multiple trips displayed at once:
+![alt text for screen readers](./assets/multipleTrips.png "error message")
 
 
