@@ -4,14 +4,16 @@ import { getPic } from './js/function'
 import { clicker } from './js/function'
 import { endDateCheck } from './js/endDateCheck'
 import { startDateCheck } from './js/function'
+
+
 import './styles/styles.scss'
 
 
 
-export {
-  
+export {  
     clicker,
     getPic,
     endDateCheck,
     startDateCheck
+    
   }

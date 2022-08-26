@@ -1,6 +1,7 @@
 const tripItem = document.getElementById("main_grid");
 let clicks = 0;
 
+
 // clicker will help me with the creation and identification of new entries
 function clicker() {
     clicks += 1;
@@ -114,5 +115,5 @@ const postData = async (url = '', data = {}) => {
 
 export { getPic }
 export { clicker }
-//export { endDateCheck }
+
 export { startDateCheck }
