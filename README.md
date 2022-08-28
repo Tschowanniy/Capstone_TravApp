@@ -12,6 +12,7 @@ goal is to combine all skills learned from previous projects.
 * added all of them in the code & .env file
 * created stupidly complex functions to create new entries on the webpage, when you enter a destination and some dates
 * added multiple new additions to npm
+* added width size info in head-tag
 
 ### Which files were touched?
 
@@ -28,4 +29,5 @@ One of the possible error messages:
 Multiple trips displayed at once:
 ![alt text for screen readers](./assets/multipleTrips.png "error message")
 
-
+Small Screen View:
+![alt text for screen readers](./assets/Small_Devices.png "error message")
